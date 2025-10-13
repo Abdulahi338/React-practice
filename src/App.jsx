@@ -4,17 +4,18 @@ import './App.css'
 import Exercise1 from './Exercise1';
 import Blog from './Exercise2';
 import UserCard from './Exercise3';
+import ShowText from './ShowText';
 
 
 function App() {
-  const userName = "ALi";
-  const email = "azam@gmail.com";
+  // const userName = "ALi";
+  // const email = "azam@gmail.com";
 
   return (
     <>
     {/* <Exercise1/>
     <Blog/> */}
-    <UserCard 
+    {/* <UserCard 
     user ={userName}
     email ={email}
     />
@@ -37,6 +38,8 @@ function App() {
      <UserCard 
     user ={"Sumayo"}
     email ={"sumayo@gmail.com"}
+    /> */}
+       <ShowText
     />
 
     </>
