@@ -5,6 +5,8 @@ import Exercise1 from './Exercise1';
 import Blog from './Exercise2';
 import UserCard from './Exercise3';
 import ShowText from './ShowText';
+import Tglebutton from './ToggleButton';
+import ToggleButton from './ToggleButton';
 
 
 function App() {
@@ -39,8 +41,8 @@ function App() {
     user ={"Sumayo"}
     email ={"sumayo@gmail.com"}
     /> */}
-       <ShowText
-    />
+       {/* <ShowText/> */}
+       <ToggleButton/>
 
     </>
   )
