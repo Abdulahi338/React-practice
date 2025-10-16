@@ -7,6 +7,7 @@ import UserCard from './Exercise3';
 import ShowText from './ShowText';
 import Tglebutton from './ToggleButton';
 import ToggleButton from './ToggleButton';
+import UpdatingObjec from './UpdatingObjec'
 
 
 function App() {
@@ -42,7 +43,8 @@ function App() {
     email ={"sumayo@gmail.com"}
     /> */}
        {/* <ShowText/> */}
-       <ToggleButton/>
+       {/* <ToggleButton/> */}
+       <UpdatingObjec/>
 
     </>
   )
