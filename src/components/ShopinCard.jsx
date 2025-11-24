@@ -17,16 +17,28 @@ function ShopinCard() {
       };
 
       setProducts([...products, newPRoduct]);
-        
+      
     }
-    setProductName("");
-    setProductPrice("");
+   
   }
 
-  const removeproduct =(id)=>{
-    const removeProduct = products.filter(product =>product.id !== id);
+  const removeproduct = (id) => {
+    const removeProduct = products.filter((product) => product.id !== id);
     setProducts(removeProduct);
+  };
 
+  const addItem = (id) =>{
+    const updatedProducts  = products.map((product =>
+        product.id == id ? {...product, quantity: product.quantity +1}:product
+    ))
+    setProducts(updatedProducts);
+  }
+
+  const deleteQuaintity = (id)=>{
+    const updatedQuantity = products.map((product =>
+        product.id == id && product.quantity > 1 ? {...product , quantity : product.quantity -1}:product
+    ))
+  setProducts(updatedQuantity);
 
   }
 
@@ -50,28 +62,28 @@ function ShopinCard() {
           <button onClick={addProduct}>Add to cart</button>
         </div>
         <div>
-          {products.length > 0 ? (   
-            <div> 
-                <h2>Products in cart</h2>
-                <ul>
-                    {
-                        products.map(p=>(
-                            <li key={p.id}>
-                                <strong>{p.name} </strong>- ${p.price.toFixed(2)}
-                                <div>
-                                    Quantity:
-                                    <button>-</button>
-                                    {p.quantity}
-                                    <button>+</button>
-                                </div>
-                                <div>
-                                    <button onClick={()=>removeproduct(p.id)}>Remove</button>
-                                </div>
-                            </li>
-                        )) 
-                    }
-                </ul>
-            </div>    
+          {products.length > 0 ? (
+            <div>
+              <h2>Products in cart</h2>
+              <ul>
+                {products.map((p) => (
+                  <li key={p.id}>
+                    <strong>{p.name} </strong>- ${p.price.toFixed(2)}
+                    <div>
+                      Quantity:
+                      <button onClick={()=> deleteQuaintity(p.id)}>-</button>
+                      {p.quantity}
+                      <button onClick={() => addItem(p.id)}>+</button>
+                    </div>
+                    <div>
+                      <button onClick={() => removeproduct(p.id)}>
+                        Remove
+                      </button>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ) : (
             <h2>No products in cart</h2>
           )}
