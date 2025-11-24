@@ -23,6 +23,13 @@ function ShopinCard() {
     setProductPrice("");
   }
 
+  const removeproduct =(id)=>{
+    const removeProduct = products.filter(product =>product.id !== id);
+    setProducts(removeProduct);
+
+
+  }
+
   return (
     <>
       <div>
@@ -36,6 +43,7 @@ function ShopinCard() {
           />
           <input
             type="text"
+            min="0"
             placeholder="Price"
             onChange={(e) => setProductPrice(e.target.value)}
           />
@@ -57,7 +65,7 @@ function ShopinCard() {
                                     <button>+</button>
                                 </div>
                                 <div>
-                                    <button>Remove</button>
+                                    <button onClick={()=>removeproduct(p.id)}>Remove</button>
                                 </div>
                             </li>
                         )) 
