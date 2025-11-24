@@ -12,12 +12,15 @@ function ShopinCard() {
       const newPRoduct = {
         id: Date.now(),
         name: productName,
-        price: productPrice,
+        price: parseFloat(productPrice),
         quantity: 1,
       };
 
       setProducts([...products, newPRoduct]);
+        
     }
+    setProductName("");
+    setProductPrice("");
   }
 
   return (
@@ -47,6 +50,15 @@ function ShopinCard() {
                         products.map(p=>(
                             <li key={p.id}>
                                 <strong>{p.name} </strong>- ${p.price.toFixed(2)}
+                                <div>
+                                    Quantity:
+                                    <button>-</button>
+                                    {p.quantity}
+                                    <button>+</button>
+                                </div>
+                                <div>
+                                    <button>Remove</button>
+                                </div>
                             </li>
                         )) 
                     }
