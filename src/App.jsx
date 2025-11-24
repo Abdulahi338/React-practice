@@ -7,7 +7,9 @@ import UserCard from './Exercise3';
 import ShowText from './ShowText';
 import Tglebutton from './ToggleButton';
 import ToggleButton from './ToggleButton';
-import UpdatingObjec from './UpdatingObjec'
+import UpdatingObjec from './UpdatingObjec';
+import Todo from './Todo';
+import ShopinCard from './components/shopinCard';
 
 
 function App() {
@@ -44,7 +46,9 @@ function App() {
     /> */}
        {/* <ShowText/> */}
        {/* <ToggleButton/> */}
-       <UpdatingObjec/>
+       {/* <UpdatingObjec/> */}
+       <ShopinCard/>
+       {/* <Todo/> */}
 
     </>
   )
