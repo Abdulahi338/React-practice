@@ -9,7 +9,7 @@ import Tglebutton from './ToggleButton';
 import ToggleButton from './ToggleButton';
 import UpdatingObjec from './UpdatingObjec';
 import Todo from './Todo';
-import ShopinCard from './components/shopinCard';
+import ShopinCard from './components/Exercise5';
 
 
 function App() {
