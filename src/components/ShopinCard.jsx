@@ -17,9 +17,7 @@ function ShopinCard() {
       };
 
       setProducts([...products, newPRoduct]);
-      
     }
-   
   }
 
   const removeproduct = (id) => {
@@ -27,20 +25,25 @@ function ShopinCard() {
     setProducts(removeProduct);
   };
 
-  const addItem = (id) =>{
-    const updatedProducts  = products.map((product =>
-        product.id == id ? {...product, quantity: product.quantity +1}:product
-    ))
+  const addItem = (id) => {
+    const updatedProducts = products.map((product) =>
+      product.id == id
+        ? { ...product, quantity: product.quantity + 1 }
+        : product
+    );
     setProducts(updatedProducts);
-  }
+  };
 
-  const deleteQuaintity = (id)=>{
-    const updatedQuantity = products.map((product =>
-        product.id == id && product.quantity > 1 ? {...product , quantity : product.quantity -1}:product
-    ))
-  setProducts(updatedQuantity);
+  const deleteQuaintity = (id) => {
+    const updatedQuantity = products.map((product) =>
+      product.id == id && product.quantity > 1
+        ? { ...product, quantity: product.quantity - 1 }
+        : product
+    );
+    setProducts(updatedQuantity);
+  };
 
-  }
+  const totalPrice = products.reduce((sum , current)=> sum + current.price * current.quantity,0);
 
   return (
     <>
@@ -71,7 +74,7 @@ function ShopinCard() {
                     <strong>{p.name} </strong>- ${p.price.toFixed(2)}
                     <div>
                       Quantity:
-                      <button onClick={()=> deleteQuaintity(p.id)}>-</button>
+                      <button onClick={() => deleteQuaintity(p.id)}>-</button>
                       {p.quantity}
                       <button onClick={() => addItem(p.id)}>+</button>
                     </div>
@@ -83,6 +86,7 @@ function ShopinCard() {
                   </li>
                 ))}
               </ul>
+              <h2>Total Price : ${totalPrice}</h2>
             </div>
           ) : (
             <h2>No products in cart</h2>
