@@ -1,17 +1,16 @@
 import React from 'react'
 
 import './App.css'
-import Exercise1 from './Exercise1';
-import Blog from './Exercise2';
-import UserCard from './Exercise3';
-import ShowText from './ShowText';
-import Tglebutton from './ToggleButton';
-import ToggleButton from './ToggleButton';
-import UpdatingObjec from './UpdatingObjec';
-import Todo from './Todo';
-import ShopinCard from './components/Exercise5';
-
-
+// import Exercise1 from './Exercise1';
+// import Blog from './Exercise2';
+// import UserCard from './Exercise3';
+// import ShowText from './ShowText';
+// import Tglebutton from './ToggleButton';
+// import ToggleButton from './ToggleButton';
+// import UpdatingObjec from './UpdatingObjec';
+// import Todo from './Todo';
+// 
+import Exercise6 from './Exercise6'
 function App() {
   // const userName = "ALi";
   // const email = "azam@gmail.com";
@@ -47,7 +46,8 @@ function App() {
        {/* <ShowText/> */}
        {/* <ToggleButton/> */}
        {/* <UpdatingObjec/> */}
-       <ShopinCard/>
+       {/* <ShopinCard/> */}
+       <Exercise6/>
        {/* <Todo/> */}
 
     </>
