@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-import './App.css'
+import "./App.css";
 // import Exercise1 from './Exercise1';
 // import Blog from './Exercise2';
 // import UserCard from './Exercise3';
@@ -9,17 +9,18 @@ import './App.css'
 // import ToggleButton from './ToggleButton';
 // import UpdatingObjec from './UpdatingObjec';
 // import Todo from './Todo';
-// 
-import Exercise6 from './Exercise6'
+//
+import Exercise6 from "./Exercise6";
+import MouseTrace from "./components/MouseTrace";
 function App() {
   // const userName = "ALi";
   // const email = "azam@gmail.com";
 
   return (
     <>
-    {/* <Exercise1/>
+      {/* <Exercise1/>
     <Blog/> */}
-    {/* <UserCard 
+      {/* <UserCard 
     user ={userName}
     email ={email}
     />
@@ -43,15 +44,16 @@ function App() {
     user ={"Sumayo"}
     email ={"sumayo@gmail.com"}
     /> */}
-       {/* <ShowText/> */}
-       {/* <ToggleButton/> */}
-       {/* <UpdatingObjec/> */}
-       {/* <ShopinCard/> */}
-       <Exercise6/>
-       {/* <Todo/> */}
+      {/* <ShowText/> */}
+      {/* <ToggleButton/> */}
+      {/* <UpdatingObjec/> */}
+      {/* <ShopinCard/> */}
+      {/* <Exercise6 /> */}
+      {/* <Todo/> */}
 
+      <MouseTrace />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

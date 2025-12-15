@@ -23,7 +23,7 @@ function Exercise6() {
       <input
         type="text"
         value={greating}
-        placeholder="Hi"
+        placeholder=" Enter Greating Text"
         onChange={(e) => setGreating(e.target.value)}
       />
     </div>
@@ -31,3 +31,5 @@ function Exercise6() {
 }
 
 export default Exercise6;
+
+

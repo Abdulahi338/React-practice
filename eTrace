@@ -1,0 +1,81 @@
+warning: in the working copy of 'src/App.jsx', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/src/App.jsx b/src/App.jsx[m
+[1mindex 34e9398..5d96b4c 100644[m
+[1m--- a/src/App.jsx[m
+[1m+++ b/src/App.jsx[m
+[36m@@ -1,6 +1,6 @@[m
+[31m-import React from 'react'[m
+[32m+[m[32mimport React from "react";[m
+ [m
+[31m-import './App.css'[m
+[32m+[m[32mimport "./App.css";[m
+ // import Exercise1 from './Exercise1';[m
+ // import Blog from './Exercise2';[m
+ // import UserCard from './Exercise3';[m
+[36m@@ -9,17 +9,18 @@[m [mimport './App.css'[m
+ // import ToggleButton from './ToggleButton';[m
+ // import UpdatingObjec from './UpdatingObjec';[m
+ // import Todo from './Todo';[m
+[31m-// [m
+[31m-import Exercise6 from './Exercise6'[m
+[32m+[m[32m//[m
+[32m+[m[32mimport Exercise6 from "./Exercise6";[m
+[32m+[m[32mimport MouseTrace from "./components/MouseTrace";[m
+ function App() {[m
+   // const userName = "ALi";[m
+   // const email = "azam@gmail.com";[m
+ [m
+   return ([m
+     <>[m
+[31m-    {/* <Exercise1/>[m
+[32m+[m[32m      {/* <Exercise1/>[m
+     <Blog/> */}[m
+[31m-    {/* <UserCard [m
+[32m+[m[32m      {/* <UserCard[m[41m [m
+     user ={userName}[m
+     email ={email}[m
+     />[m
+[36m@@ -43,15 +44,16 @@[m [mfunction App() {[m
+     user ={"Sumayo"}[m
+     email ={"sumayo@gmail.com"}[m
+     /> */}[m
+[31m-       {/* <ShowText/> */}[m
+[31m-       {/* <ToggleButton/> */}[m
+[31m-       {/* <UpdatingObjec/> */}[m
+[31m-       {/* <ShopinCard/> */}[m
+[31m-       <Exercise6/>[m
+[31m-       {/* <Todo/> */}[m
+[32m+[m[32m      {/* <ShowText/> */}[m
+[32m+[m[32m      {/* <ToggleButton/> */}[m
+[32m+[m[32m      {/* <UpdatingObjec/> */}[m
+[32m+[m[32m      {/* <ShopinCard/> */}[m
+[32m+[m[32m      {/* <Exercise6 /> */}[m
+[32m+[m[32m      {/* <Todo/> */}[m
+ [m
+[32m+[m[32m      <MouseTrace />[m
+     </>[m
+[31m-  )[m
+[32m+[m[32m  );[m
+ }[m
+ [m
+[31m-export default App[m
+[32m+[m[32mexport default App;[m
+[1mdiff --git a/src/Exercise6.jsx b/src/Exercise6.jsx[m
+[1mindex e704ead..6760c33 100644[m
+[1m--- a/src/Exercise6.jsx[m
+[1m+++ b/src/Exercise6.jsx[m
+[36m@@ -23,7 +23,7 @@[m [mfunction Exercise6() {[m
+       <input[m
+         type="text"[m
+         value={greating}[m
+[31m-        placeholder="Hi"[m
+[32m+[m[32m        placeholder=" Enter Greating Text"[m
+         onChange={(e) => setGreating(e.target.value)}[m
+       />[m
+     </div>[m
+[36m@@ -31,3 +31,5 @@[m [mfunction Exercise6() {[m
+ }[m
+ [m
+ export default Exercise6;[m
+[41m+[m
+[41m+[m
