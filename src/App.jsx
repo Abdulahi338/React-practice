@@ -12,6 +12,7 @@ import "./App.css";
 //
 import Exercise6 from "./Exercise6";
 import MouseTrace from "./components/MouseTrace";
+import Exercise8  from "./components/Exercise8";  
 function App() {
   // const userName = "ALi";
   // const email = "azam@gmail.com";
@@ -51,7 +52,8 @@ function App() {
       {/* <Exercise6 /> */}
       {/* <Todo/> */}
 
-      <MouseTrace />
+      {/* <MouseTrace /> */}
+      <Exercise8/>
     </>
   );
 }
