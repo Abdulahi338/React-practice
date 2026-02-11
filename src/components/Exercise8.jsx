@@ -30,6 +30,11 @@ export default function Exercise8() {
     const handleStop = ()=>{
         setIsRunnig(false);
     }
+
+    const handleRestart = ()=>{
+        setTime(0);
+        setIsRunnig(false)
+    }
     
   return (
     <div>
@@ -44,7 +49,7 @@ export default function Exercise8() {
         <div>
             <button disabled = {isRunnig} onClick={handileStart} >Start</button>
             <button disabled={!isRunnig} onClick={handleStop}>Stop</button>
-            <button>Reset</button>
+            <button onClick={handleRestart}>Reset</button>
         </div>
 
     </div>
