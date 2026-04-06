@@ -13,6 +13,8 @@ import "./App.css";
 import Exercise6 from "./Exercise6";
 import MouseTrace from "./components/MouseTrace";
 import Exercise8  from "./components/Exercise8";  
+import FetchData from "./components/FetchData";
+import Exervise9 from "./components/Exervise9"
 function App() {
   // const userName = "ALi";
   // const email = "azam@gmail.com";
@@ -53,7 +55,9 @@ function App() {
       {/* <Todo/> */}
 
       {/* <MouseTrace /> */}
-      <Exercise8/>
+      {/* <Exercise8/> */}
+      {/* <FetchData/> */}
+      <Exervise9/>
     </>
   );
 }
